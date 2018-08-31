@@ -21,6 +21,9 @@
   所以我们通常把这个**用于存放控制信息的内存空间称为套接字的实体，协议栈会根据这些控制信息进行下一步操作**，这也就是套接字的作用；<br/>
   套接字其实是可以通过命令行的方式来查看的，可以通过**netstat -an -p TCP**命令来查看，-a表示**不仅显示正在通信状态(ESTABLISHED状态)的套接字，还显示处于尚未开始通信状态(LISTENING状态)的套接字**，-n表示**显示IP地址和端口号**<br/>
   ![](https://github.com/JS-Even-JS/-How-is-the-network-connected/blob/master/images/socket.png)
+  图中的每一行就是一个socket套接字<br/>
+  tcp46      0      0  *.8080                 *.*                    LISTEN     <br/>
+  
 
 ### 2.2 
 * 2.2.1 获取微信小程序的AppID <br/>
