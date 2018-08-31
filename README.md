@@ -22,8 +22,12 @@
   套接字其实是可以通过命令行的方式来查看的，可以通过**netstat -an -p TCP**命令来查看，-a表示**不仅显示正在通信状态(ESTABLISHED状态)的套接字，还显示处于尚未开始通信状态(LISTENING状态)的套接字**，-n表示**显示IP地址和端口号**<br/>
   ![](https://github.com/JS-Even-JS/-How-is-the-network-connected/blob/master/images/socket.png)
   图中的每一行就是一个socket套接字<br/>
-  tcp46      0      0  *.8080                 *.*                    LISTEN     <br/>
-  
+  tcp46       0      0  *.8080                 *.*                    LISTEN     <br/>
+  ip地址为*号*表示远程ip地址和本地ip地址都未确定，说明通信还没有开始，处于监听状态，在等待客户端的连接，并且是在8080端口上等待客户端连接；<br/>
+  tcp4       0      0  127.0.0.1.8080         127.0.0.1.65213        ESTABLISHED <br/>
+  这个是服务器端的socket <br/>
+  tcp4       0      0  127.0.0.1.65213        127.0.0.1.8080         ESTABLISHED <br/>
+  这个是客户端的socket <br/>
 
 ### 2.2 
 * 2.2.1 获取微信小程序的AppID <br/>
